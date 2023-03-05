@@ -8,7 +8,7 @@ export const TransactionsContainer = styled.main`
 `
 
 interface HighlightProps {
-  variant: 'income' | 'expense'
+  variant: 'income' | 'outcome'
 }
 
 export const TransactionsTable = styled.table`
@@ -35,7 +35,7 @@ export const TransactionsTable = styled.table`
 
 export const Highlight = styled.td<HighlightProps>`
   color: ${(props) =>
-    props.variant === 'expense'
+    props.variant === 'outcome'
       ? props.theme['red-300']
       : props.theme['green-300']};
 `
